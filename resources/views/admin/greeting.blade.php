@@ -1,0 +1,3 @@
+<div>
+    @dd($categores)
+</div>

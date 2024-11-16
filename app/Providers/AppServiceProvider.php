@@ -3,7 +3,10 @@
 namespace App\Providers;
 
 use App\Services\ApiConnection;
+use App\View\Composer\GreetingComposer;
+use App\View\Composer\SettingComposer;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +18,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(ApiConnection::class, function ($app) {
             return new ApiConnection();
         });
+
+
     }
 
     /**
@@ -22,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('greeting', SettingComposer::class);
+        View::composer('admin.greetings', GreetingComposer::class);
     }
 }
