@@ -14,3 +14,6 @@ use App\Http\Controllers\SecondController;
 Route::get('/first', [FirstController::class, 'index']);
 Route::get('/second', [SecondController::class, 'index']);
 Route::get('/request', [RequestController::class, 'index']);
+
+Route::get('greetings', fn () => view('greeting'));
+Route::get('admin/greetings', fn () => view('admin.greeting'));
