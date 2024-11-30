@@ -20,3 +20,5 @@ Route::get('admin/greetings', fn () => view('admin.greeting'));
 
 
 Route::view('/forms', 'form');
+
+Route::resource('users', \App\Http\Controllers\UserController::class);
