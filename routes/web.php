@@ -17,3 +17,6 @@ Route::get('/request', [RequestController::class, 'index']);
 
 Route::get('greetings', fn () => view('greeting'));
 Route::get('admin/greetings', fn () => view('admin.greeting'));
+
+
+Route::view('/forms', 'form');
