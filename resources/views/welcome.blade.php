@@ -168,5 +168,7 @@
                 </div>
             </div>
         </div>
+
+        <x-forms.input />
     </body>
 </html>
